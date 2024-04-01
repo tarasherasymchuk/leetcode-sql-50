@@ -1,4 +1,6 @@
-SELECT e.name, b.bonus
+SELECT m.name
 FROM employee e
-LEFT JOIN bonus b ON b.empId = e.empId
-WHERE b.bonus < 1000 OR b.bonus IS NULL;
+JOIN employee m ON m.id = e.managerId
+WHERE e.managerId IS NOT NULL
+GROUP BY m.name, m.id
+HAVING COUNT(e.id) >= 5

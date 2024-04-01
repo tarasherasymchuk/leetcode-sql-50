@@ -1,33 +1,23 @@
-## 570. Employee bonus
+## 570. Managers with at least 5 direct reports
 
 Table: Employee
 ```
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
-| empId       | int     |
+| id          | int     |
 | name        | varchar |
-| supervisor  | int     |
-| salary      | int     |
+| department  | varchar |
+| managerId   | int     |
 +-------------+---------+
 ```
-empId is the column with unique values for this table.
-Each row of this table indicates the name and the ID of an employee in addition to their salary and the id of their manager.
+id is the primary key (column with unique values) for this table.
+Each row of this table indicates the name of an employee, their department, and the id of their manager.
+If managerId is null, then the employee does not have a manager.
+No employee will be the manager of themself.
 
-Table: Bonus
-```
-+-------------+------+
-| Column Name | Type |
-+-------------+------+
-| empId       | int  |
-| bonus       | int  |
-+-------------+------+
-```
-empId is the column of unique values for this table.
-empId is a foreign key (reference column) to empId from the Employee table.
-Each row of this table contains the id of an employee and their respective bonus.
+ 
 
-
-Write a solution to report the name and bonus amount of each employee with a bonus less than 1000.
+Write a solution to find managers with at least five direct reports.
 
 Return the result table in any order.
