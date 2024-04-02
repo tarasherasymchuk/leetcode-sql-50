@@ -1,4 +1,4 @@
-![progress](https://progress-bar.dev/15/?scale=50&title=Progress&width=100&color=babaca&suffix=%20of%2050)
+![progress](https://progress-bar.dev/16/?scale=50&title=Progress&width=100&color=babaca&suffix=%20of%2050)
 
 ## SQL 50
 
